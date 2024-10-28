@@ -3,13 +3,14 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyApyh0-BXtZ4bfwkwpQpli07NYY_lfOR-M",
-  authDomain: "daddy-clothing.firebaseapp.com",
-  projectId: "daddy-clothing",
-  storageBucket: "daddy-clothing.appspot.com",
-  messagingSenderId: "163177733219",
-  appId: "1:163177733219:web:a698ba6c7ffaba6b4e6c56"
-};
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  };
+
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
