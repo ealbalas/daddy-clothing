@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
-import { ReactComponent as DaddyLogo } from '../../assests/daddy.svg';
+import { ReactComponent as DaddyLogo } from '../../assets/daddy.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import './navigation.styles.scss';
 
