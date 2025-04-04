@@ -5,9 +5,12 @@ import { ReactComponent as DaddyLogo } from '../../assets/daddy.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import './navigation.styles.scss';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+import { useCart } from '../../contexts/cart.context';  
 
 const Navigation = () => {
     const  { currentUser } = useContext(UserContext);
+    const { isCartOpen } = useCart();
 
     const signOutHandler = async () => {
       await signOutUser();
@@ -30,6 +33,7 @@ const Navigation = () => {
                 }
                 <CartIcon />
             </div>
+            {isCartOpen && <CartDropdown />}
         </div>
         <Outlet />
       </Fragment>
