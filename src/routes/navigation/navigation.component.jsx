@@ -4,6 +4,7 @@ import { UserContext } from '../../contexts/user.context';
 import { ReactComponent as DaddyLogo } from '../../assets/daddy.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import './navigation.styles.scss';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
 
 const Navigation = () => {
     const  { currentUser } = useContext(UserContext);
@@ -27,6 +28,7 @@ const Navigation = () => {
                       <Link className='nav-link' to='/auth'>SIGN IN</Link>
                   )
                 }
+                <CartIcon />
             </div>
         </div>
         <Outlet />
